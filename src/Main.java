@@ -5,18 +5,27 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("velkommen til Sten Saks Papir 1.0");
-
+        // her laver jeg en variabel der hedder runde1 og jeg siger at den skal snakke med SSP.java
         SSP runde1 = new SSP();
+
+        // her laver jeg en scanner som skal scanne hvad det er at vi skriver inde i programmet
         Scanner scanner = new Scanner(System.in);
         System.out.println("skriv start for at begynde");
+
+        // her laver jeg en variabel som en string som jeg så bruger senere
         String spillerenString = scanner.next();
+
+        // her laver jeg et if statement som gør at hvis man skriver start så starter programmet og hvis man skriver sluk så slukker det
         if (spillerenString.equalsIgnoreCase("start")){
             System.out.println("velkommen til spillet nu skal du bare vælge om du vil spille med sten, saks eller papir");
+
+            // her har jeg så puttet sluk ind i et while loop som gør at det er lige meget hvornår man skriver sluk så slukker den
         while (!spillerenString.equalsIgnoreCase("Sluk")) {
             spillerenString = scanner.next();
-            if (spillerenString.equalsIgnoreCase("Sluk")) {
-                System.out.println("");
-            } else {
+
+            // her laver jeg et if statement der gør at hvis jeg skriver sluk så slukker programmet
+            if (spillerenString.equalsIgnoreCase("Sluk")) {break;}
+            else {
                 //indlæse spillerens hånd
                 Haand spillerensHaand = null;
                 if (spillerenString.equalsIgnoreCase("sten")) {
